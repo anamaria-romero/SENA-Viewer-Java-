@@ -1,12 +1,12 @@
 package edu.misena.senaviewer.model;
 
 import java.util.List;
-import java.util.Date;
+import java.util.Scanner;
 
 public class Book {
     int id;
     String title;
-    Date editionDate;
+    String editionDate;
     String editorial;
     List<String> authors;
     String isbn;
@@ -14,7 +14,7 @@ public class Book {
     int timeReaded;
 
 
-    public Book(String title, Date editionDate, String editorial, String isbn) {
+    public Book(String title, String editionDate, String editorial, String isbn) {
         this.title = title;
         this.editionDate = editionDate;
         this.editorial = editorial;
@@ -40,10 +40,10 @@ public class Book {
     }
 
 
-    public Date getEditionDate() {
+    public String getEditionDate() {
         return editionDate;
     }
-    public void setEditionDate(Date editionDate) {
+    public void setEditionDate(String editionDate) {
         this.editionDate = editionDate;
     }
 
@@ -85,5 +85,25 @@ public class Book {
     }
     public void setTimeRead(int timeRead) {
         this.timeReaded = timeRead;
+    }
+
+
+    public static Book addBook() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el titulo del libro: ");
+        String title = scanner.nextLine();
+
+        System.out.print("Ingresa la fecha: ");
+        String editionDate = scanner.nextLine();
+
+        System.out.print("Ingresa la editorial: ");
+        String editorial = scanner.nextLine();
+
+        System.out.print("Ingresa el ISBN: ");
+        String isbn = scanner.nextLine();
+
+        System.out.print("El libro ha sido agregado.");
+        return new Book(title, editionDate,  editorial, isbn);
     }
 }
