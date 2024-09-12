@@ -1,13 +1,13 @@
 package edu.misena.senaviewer.model;
 
 public class Magazine {
-    int id;
-    String title;
-    int duration;
-    short year;
-    boolean viewed;
-    int timeViewed;
-    int sessionNumber;
+    private int id;
+    private String title;
+    private int duration;
+    private short year;
+    private boolean viewed;
+    private int timeViewed;
+    private int sessionNumber;
 
     public Magazine(String title, int duration, short year) {
         this.title = title;
