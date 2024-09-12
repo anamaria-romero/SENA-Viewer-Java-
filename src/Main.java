@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import static edu.misena.senaviewer.model.Book.addBook;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,7 +23,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    addBook();
+
                     break;
                 case 2:
 
